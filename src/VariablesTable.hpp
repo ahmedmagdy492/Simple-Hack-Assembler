@@ -23,4 +23,8 @@ namespace VariablesTable {
 
 		return variablesTable[variableName];
 	}
+
+	void ClearAllVariables() {
+		variablesTable.clear();
+	}
 }

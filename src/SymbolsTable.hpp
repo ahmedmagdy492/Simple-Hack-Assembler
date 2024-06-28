@@ -20,4 +20,8 @@ namespace SymbolsTable {
 
 		return symbolsTable[key];
 	}
+
+	void ClearAllSymbols() {
+		symbolsTable.clear();
+	}
 }

@@ -49,5 +49,6 @@
     <None Include="run_tests.bat">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
