@@ -16,7 +16,7 @@ public:
 	std::string TrimString(const std::string& str) const;
 	bool ContainsLettersOnly(const std::string& str, char exceptChar = '\0') const;
 	bool IsStringUpperCase(const std::string& str) const;
-	bool IsStringAlphNumeric(const std::string& str) const;
+	bool StringContainsAllowedChars(const std::string& str) const;
 	std::string ReadFile(const std::string& path);
 	bool IsStrContainsNumbersOnly(const std::string& str);
 	std::string TrimEnd(const std::string& str);

@@ -67,10 +67,16 @@ void DeallocMem(char** mem, size_t len) {
 
 
 int main(int argc, char* argv[]) {
+
+	if (argc < 2) {
+		std::cout << "Usage: " << argv[0] << " <path-to-assembly-file.asm>" << std::endl;
+		return 1;
+	}
+
 	const int screenWidth = 1280;
 	const int screenHeight = 800;
 
-	std::string filePath = "D:\\Books\\Malware Analysis\\Reverse Engineering\\\Computer Arch\\nand2tetris\\nand2tetris\\projects\\6\\max\\Max.asm";
+	std::string filePath(argv[1]);
 
 	InitWindow(screenWidth, screenHeight, "Simple Hack Assembler");
 	SetTargetFPS(60);

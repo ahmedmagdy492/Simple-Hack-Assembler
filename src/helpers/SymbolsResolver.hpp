@@ -89,7 +89,7 @@ public:
 						throw strStream.str();
 					}
 					
-					if (!utils.IsStringAlphNumeric(symbolName)) {
+					if (!utils.StringContainsAllowedChars(symbolName)) {
 						std::stringstream strStream;
 						strStream << "Variables should contain only letters or numbers on line " << i << std::endl;
 						throw strStream.str();

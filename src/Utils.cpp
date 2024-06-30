@@ -94,10 +94,17 @@ bool Utils::IsStringUpperCase(const std::string& str) const {
 	return true;
 }
 
-bool Utils::IsStringAlphNumeric(const std::string& str) const {
+/// <summary>
+/// checks if the string contains not allowed chars or not, the only special chars allowed are _, ., $ and :
+/// </summary>
+/// <param name="str"></param>
+/// <returns></returns>
+bool Utils::StringContainsAllowedChars(const std::string& str) const {
 	for (auto& c : str) {
-		if (!std::isalnum(c)) {
-			return false;
+		if (c != ':' && c != '.' && c != '$' && c != '_') {
+			if (!std::isalnum(c)) {
+				return false;
+			}
 		}
 	}
 
